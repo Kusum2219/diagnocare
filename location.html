@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <title>Location</title>
+        <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'>
+        <style>
+       *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#F8F7F2}
+
+header{
+
+width:100%;
+
+height:82px;
+
+background:rgba(101,146,135,.94);
+
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 8%;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+box-shadow:0 8px 24px rgba(0,0,0,.12);
+
+transition:.35s;
+
+}
+.logo{display:flex;align-items:center;gap:10px}.logo i{
+
+font-size:34px;
+
+color:#E6F2DD;
+
+animation:pulse 2.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+}
+.logo h2{color:white; font-size:30px; font-weight:700;}
+nav ul{display:flex;list-style:none;gap:35px}nav a{text-decoration:none;color:#fff;font-weight:500}
+
+nav ul li a{
+
+display:inline-block;
+
+text-decoration:none;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+nav ul li a::after{
+
+content:"";
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+height:4px;
+
+background:#E6F2DD;
+transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+nav ul li a:hover{
+
+color:#E6F2DD;
+
+transform:translateY(-3px);
+
+}
+
+nav ul li a.active{
+
+color:#E6F2DD;
+
+}
+
+nav ul li a.active::after{
+
+width:100%;
+
+}
+
+.btn{
+
+background:#E6F2DD;
+
+color:#2F3A34;
+
+padding:13px 28px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+box-shadow:0 6px 18px rgba(0,0,0,.15);
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+background:white;
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+}
+
+
+
+/*================ LOCATION PAGE ================*/
+
+.location-hero{
+    width:90%;
+    margin:40px auto;
+    background:linear-gradient(135deg,#659287,#88BDA4);
+    color:white;
+    text-align:center;
+    padding:60px 30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+.location-hero i{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.location-hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.location-hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Contact Cards */
+
+.contact-section{
+
+    width:90%;
+    margin:60px auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+    color:#659287;
+    font-size:34px;
+    margin-bottom:12px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+    color:#666;
+    margin-bottom:45px;
+
+}
+
+.contact-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+.contact-card{
+
+    background:white;
+    padding:35px 25px;
+    border-radius:18px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.contact-card i{
+
+    font-size:38px;
+    color:#659287;
+    margin-bottom:18px;
+
+}
+
+.contact-card h3{
+
+    color:#2F3A34;
+    margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+    color:#666;
+    line-height:1.7;
+
+}
+
+@media(max-width:1000px){
+
+.contact-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.location-hero h1{
+
+font-size:32px;
+
+}
+
+}
+
+/*================ GOOGLE MAP =================*/
+
+.map-section{
+
+    width:90%;
+    margin:70px auto;
+
+}
+
+.map-box{
+
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.map-box iframe{
+
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+
+}
+
+/*================ BRANCHES =================*/
+
+.branch-section{
+
+    width:90%;
+    margin:70px auto;
+
+}
+
+.branch-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+.branch-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.branch-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.branch-top{
+
+    background:#659287;
+    color:white;
+    text-align:center;
+    padding:30px;
+
+}
+
+.branch-top i{
+
+    font-size:42px;
+    margin-bottom:12px;
+
+}
+
+.branch-top h3{
+
+    font-size:24px;
+
+}
+
+.branch-content{
+
+    padding:25px;
+
+}
+
+.branch-content p{
+
+    color:#555;
+    margin:12px 0;
+    line-height:1.7;
+
+}
+
+.branch-content i{
+
+    color:#659287;
+    margin-right:10px;
+
+}
+
+.branch-btn{
+
+    display:inline-block;
+    margin-top:18px;
+    background:#659287;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:30px;
+    transition:.3s;
+
+}
+
+.branch-btn:hover{
+
+    background:#88BDA4;
+
+}
+
+@media(max-width:1000px){
+
+.branch-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*================ WHY CHOOSE US ================*/
+
+.why-section{
+
+    width:90%;
+    margin:70px auto;
+    background:#E6F2DD;
+    padding:60px 30px;
+    border-radius:20px;
+
+}
+
+.why-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+
+}
+
+.why-card{
+
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.why-card i{
+
+    font-size:42px;
+    color:#659287;
+    margin-bottom:15px;
+
+}
+
+.why-card h3{
+
+    color:#2F3A34;
+    margin-bottom:12px;
+
+}
+
+.why-card p{
+
+    color:#666;
+    line-height:1.7;
+
+}
+
+/*================ CTA ================*/
+
+.cta{
+
+    width:90%;
+    margin:70px auto;
+    background:linear-gradient(135deg,#659287,#88BDA4);
+    color:white;
+    text-align:center;
+    padding:55px 30px;
+    border-radius:20px;
+
+}
+
+.cta h2{
+
+    font-size:36px;
+    margin-bottom:15px;
+
+}
+
+.cta p{
+
+    font-size:17px;
+    margin-bottom:30px;
+
+}
+
+.cta-btn{
+
+    display:inline-block;
+    background:#E6F2DD;
+    color:#2F3A34;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.cta-btn:hover{
+
+    background:white;
+    transform:scale(1.05);
+
+}
+
+@media(max-width:900px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cta h2{
+
+font-size:28px;
+
+}
+
+}
+
+/*================ SCROLL BUTTON ================*/
+
+#topBtn{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+background:#659287;
+
+color:white;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 6px 18px rgba(0,0,0,.2);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#topBtn:hover{
+
+background:#88BDA4;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#E6F2DD;
+
+padding:60px 8% 20px;
+
+}
+
+.footer-container{
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:40px;
+
+}
+
+.footer-box{
+
+flex:1;
+min-width:250px;
+
+}
+
+.footer-box h2{
+
+color:#659287;
+margin-bottom:20px;
+
+}
+
+.footer-box h3{
+
+margin-bottom:20px;
+color:#2F3A34;
+
+}
+
+.footer-box p{
+
+color:#444;
+line-height:30px;
+
+}
+
+.footer-box a{
+
+display:block;
+
+margin-bottom:12px;
+
+text-decoration:none;
+
+color:#444;
+
+transition:.3s;
+
+}
+
+.footer-box a:hover{
+
+color:#659287;
+padding-left:8px;
+
+}
+
+.footer-box i{
+
+color:#659287;
+margin-right:10px;
+
+}
+
+hr{
+
+margin:40px 0 20px;
+
+border:none;
+
+border-top:1px solid #bfcdb7;
+
+}
+
+.copyright{
+
+text-align:center;
+
+color:#555;
+
+}
+@media(max-width:900px){header{flex-direction:column;height:auto;padding:20px}nav ul{flex-wrap:wrap;justify-content:center;margin:15px 0}.container{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+
+/* ================= LOCATION RESPONSIVE ================= */
+
+@media (max-width:992px){
+
+header{
+
+padding:15px 5%;
+height:auto;
+flex-direction:column;
+gap:15px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+
+}
+
+.location-grid,
+.branch-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.location-container,
+.location-content{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.location-map iframe{
+
+width:100%;
+height:320px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.location-title{
+
+font-size:34px;
+
+}
+
+.location-subtitle{
+
+font-size:16px;
+
+}
+
+.branch-card{
+
+padding:20px;
+
+}
+
+.location-map iframe{
+
+height:280px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.location-title{
+
+font-size:28px;
+
+}
+
+.location-subtitle{
+
+font-size:15px;
+
+}
+
+header{
+
+padding:12px;
+
+}
+
+.logo h2{
+
+font-size:24px;
+
+}
+
+.btn{
+
+padding:10px 18px;
+
+font-size:14px;
+
+}
+
+}
+</style>
+</head>
+
+<body>
+<header>
+    <div class="logo"><i class="fa-solid fa-heart-pulse"></i><h2>DiagnoCare</h2></div>
+<nav><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="location.html" class="active">Location</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></nav>
+<a class="btn" href="appointment.html">Book Appointment</a>
+</header>
+<section class="location-hero">
+
+    <i class="fa-solid fa-location-dot"></i>
+
+    <h1>Find a DiagnoCare Centre Near You</h1>
+
+    <p>
+        Trusted diagnostic services with modern laboratories,
+        expert professionals and convenient locations across Delhi.
+    </p>
+
+</section>
+
+<!-- ================= CONTACT INFO ================= -->
+
+<section class="contact-section">
+
+<h2 class="section-title">
+Contact Information
+</h2>
+
+<p class="section-subtitle">
+Everything you need before visiting our centre.
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Address</h3>
+
+<p>
+A-23, Rajouri Garden<br>
+New Delhi - 110027
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>Call Us</h3>
+
+<p>
++91 98765 43210
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>
+info@diagnocare.com
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Working Hours</h3>
+
+<p>
+Mon - Sun<br>
+7:00 AM - 9:00 PM
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GOOGLE MAP ================= -->
+
+<section class="map-section">
+
+<h2 class="section-title">
+Locate Us on Google Maps
+</h2>
+
+<p class="section-subtitle">
+Visit our main branch or navigate easily using Google Maps.
+</p>
+
+<div class="map-box">
+
+<iframe
+src="https://maps.google.com/maps?q=Rajouri%20Garden%20New%20Delhi&t=&z=14&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- ================= OUR BRANCHES ================= -->
+
+<section class="branch-section">
+
+<h2 class="section-title">
+Our Delhi Branches
+</h2>
+
+<p class="section-subtitle">
+Choose the branch nearest to you.
+</p>
+
+<div class="branch-grid">
+
+<!-- Branch 1 -->
+
+<div class="branch-card">
+
+<div class="branch-top">
+
+<i class="fa-solid fa-hospital"></i>
+
+<h3>Rajouri Garden</h3>
+
+</div>
+
+<div class="branch-content">
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+A-23, Rajouri Garden,
+New Delhi
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
++91 98765 43210
+</p>
+
+<p>
+<i class="fa-solid fa-clock"></i>
+7:00 AM - 9:00 PM
+</p>
+
+<a href="https://maps.app.goo.gl/zrpkjQHugCWBi13cA" target="_blank" class="branch-btn">
+View on Map
+</a>
+
+</div>
+
+</div>
+
+<!-- Branch 2 -->
+
+<div class="branch-card">
+
+<div class="branch-top">
+
+<i class="fa-solid fa-hospital"></i>
+
+<h3>Lajpat Nagar</h3>
+
+</div>
+
+<div class="branch-content">
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+Lajpat Nagar,
+New Delhi
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
++91 98765 43211
+</p>
+
+<p>
+<i class="fa-solid fa-clock"></i>
+7:00 AM - 9:00 PM
+</p>
+
+<a href="https://maps.app.goo.gl/TUraeUtBzd4Zei5c8" target="_blank" class="branch-btn">
+View on Map
+</a>
+
+</div>
+
+</div>
+
+<!-- Branch 3 -->
+
+<div class="branch-card">
+
+<div class="branch-top">
+
+<i class="fa-solid fa-hospital"></i>
+
+<h3>Dwarka Sector 12</h3>
+
+</div>
+
+<div class="branch-content">
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+Dwarka Sector 12,
+New Delhi
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
++91 98765 43212
+</p>
+
+<p>
+<i class="fa-solid fa-clock"></i>
+7:00 AM - 9:00 PM
+</p>
+
+<a href="https://maps.app.goo.gl/sbgdudJ5sut9hGy87" target="_blank" class="branch-btn">
+View on Map
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-section">
+
+<h2 class="section-title">
+Why Choose DiagnoCare?
+</h2>
+
+<p class="section-subtitle">
+Delivering trusted healthcare with advanced technology and expert professionals.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h3>NABL Certified</h3>
+
+<p>
+Our laboratory follows certified quality standards for accurate and reliable reports.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Reports</h3>
+
+<p>
+Get most test reports on the same day with quick digital access.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<h3>Expert Staff</h3>
+
+<p>
+Experienced pathologists and trained technicians ensure quality service.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-square-parking"></i>
+
+<h3>Free Parking</h3>
+
+<p>
+Convenient parking facility available for patients and visitors.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-wheelchair"></i>
+
+<h3>Wheelchair Friendly</h3>
+
+<p>
+Our centre is fully accessible for senior citizens and differently-abled patients.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-file-medical"></i>
+
+<h3>Digital Reports</h3>
+
+<p>
+Receive reports online via email for easy access anytime.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>Need Help Finding Us?</h2>
+
+<p>
+Our team is always ready to assist you. Visit our nearest branch or contact us for directions.
+</p>
+
+<a href="https://maps.google.com" target="_blank" class="cta-btn">
+<i class="fa-solid fa-location-arrow"></i>
+Get Directions
+</a>
+
+</section>
+<div id="topBtn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</div>
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Column 1 -->
+        <div class="footer-box">
+
+            <h2>DiagnoCare</h2>
+
+            <p>
+                Providing trusted pathology tests,
+                diagnostic scans and health packages
+                with accurate reports and experienced professionals.
+            </p>
+
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="location.html">Location</a>
+            <a href="appointment.html">Book Appointment</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-box">
+
+            <h3>Contact Info</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Delhi, India
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 9876543210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@diagnocare.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-clock"></i>
+                Mon - Sun : 7:00 AM - 9:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+        © 2026 DiagnoCare. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300||document.documentElement.scrollTop>300){
+
+topBtn.style.display="flex";
+
+}
+
+else{
+
+topBtn.style.display="none";
+
+}
+
+};
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
+</body>
+</html>

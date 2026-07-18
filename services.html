@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+        <title>Services</title>
+        <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'>
+        <style>
+       *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#F8F7F2}
+header{
+
+width:100%;
+
+height:82px;
+
+background:rgba(101,146,135,.94);
+
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 8%;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+box-shadow:0 8px 24px rgba(0,0,0,.12);
+
+transition:.35s;
+
+}
+.logo{display:flex;align-items:center;gap:10px}.logo i{
+
+font-size:32px;
+color:#fff;
+
+}
+.logo h2{color:white; font-size:30px; font-weight:700;}
+nav ul{display:flex;list-style:none;gap:35px}nav a{text-decoration:none;color:#fff;font-weight:500}
+
+nav ul li a{
+
+display:inline-block;
+
+text-decoration:none;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+nav ul li a::after{
+
+content:"";
+position:absolute;
+
+left:0;
+bottom:-6px;
+
+width:0;
+height:4px;
+
+background:#E6F2DD;
+transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+nav ul li a:hover{
+
+color:#E6F2DD;
+
+transform:translateY(-3px);
+
+}
+
+nav ul li a.active{
+
+color:#E6F2DD;
+
+}
+
+nav ul li a.active::after{
+
+width:100%;
+
+}
+
+.btn{
+
+background:#E6F2DD;
+
+color:#2F3A34;
+
+padding:13px 28px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+box-shadow:0 6px 18px rgba(0,0,0,.15);
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+background:white;
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 28px rgba(0,0,0,.18);
+
+}
+
+
+/*========== SERVICES HERO ==========*/
+
+
+.service-hero{
+
+    width:100%;
+    height:600px;
+    margin:0;
+    border-radius:0;
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(101,146,135,.72),
+    rgba(101,146,135,.72)),
+    url("images/services-bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    width:75%;
+    color:#fff;
+
+}
+
+.hero-content h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+    font-weight:700;
+
+}
+
+.hero-content p{
+
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+    text-decoration:none;
+    background:#E6F2DD;
+    color:#2F3A34;
+    padding:15px 34px;
+    border-radius:35px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+    background:#fff;
+    transform:translateY(-3px);
+
+}
+
+@media(max-width:768px){
+
+.service-hero{
+
+height:430px;
+
+}
+
+.hero-content{
+
+width:90%;
+
+}
+
+.hero-content h1{
+
+font-size:38px;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+}
+
+}
+/*================ WHY OUR SERVICES ================*/
+
+.service-feature{
+
+width:90%;
+
+margin:70px auto;
+
+}
+
+.service-title{
+
+text-align:center;
+
+font-size:36px;
+
+color:#659287;
+
+margin-bottom:10px;
+
+}
+
+.service-subtitle{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:45px;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.feature-card{
+
+background:#fff;
+
+padding:35px 25px;
+
+text-align:center;
+
+border-radius:18px;
+
+box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.feature-card i{
+
+font-size:42px;
+
+color:#659287;
+
+margin-bottom:18px;
+
+}
+
+.feature-card h3{
+
+margin-bottom:12px;
+
+color:#2F3A34;
+
+}
+
+.feature-card p{
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+@media(max-width:1000px){
+
+.feature-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-hero h1{
+
+font-size:34px;
+
+}
+
+}
+
+/*================ IMAGING SERVICES ================*/
+
+.imaging-section{
+
+width:90%;
+
+margin:80px auto;
+
+}
+
+.imaging-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:28px;
+
+margin-top:45px;
+
+}
+
+.imaging-card{
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.imaging-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 12px 28px rgba(0,0,0,.15);
+
+}
+
+.imaging-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+transition:.4s;
+
+display:block;
+
+}
+
+.imaging-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.imaging-content{
+
+padding:22px;
+
+}
+
+.imaging-content h3{
+
+color:#659287;
+
+margin-bottom:12px;
+
+font-size:22px;
+
+}
+
+.imaging-content p{
+
+color:#666;
+
+line-height:1.7;
+
+margin-bottom:18px;
+
+}
+
+.imaging-btn{
+
+display:inline-block;
+
+background:#659287;
+
+color:#fff;
+
+padding:11px 20px;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+font-weight:500;
+
+}
+
+.imaging-btn:hover{
+
+background:#88BDA4;
+
+}
+
+@media(max-width:1100px){
+
+.imaging-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.imaging-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*================ LABORATORY TESTS ================*/
+
+.lab-section{
+    width:90%;
+    margin:80px auto;
+}
+
+.lab-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    margin-top:45px;
+}
+
+.lab-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.lab-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 28px rgba(0,0,0,.15);
+}
+
+.lab-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+    display:block;
+}
+
+.lab-card:hover img{
+    transform:scale(1.08);
+}
+
+.lab-content{
+    padding:22px;
+}
+
+.lab-content h3{
+    color:#659287;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.lab-content p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.lab-btn{
+    display:inline-block;
+    background:#659287;
+    color:#fff;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.lab-btn:hover{
+    background:#88BDA4;
+}
+
+@media(max-width:1100px){
+.lab-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:700px){
+.lab-grid{
+grid-template-columns:1fr;
+}
+}
+
+/*================ HEALTH PACKAGES ================*/
+
+.package-section{
+    width:90%;
+    margin:80px auto;
+}
+
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:45px;
+}
+
+.package-card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+    transition:.35s;
+    position:relative;
+}
+
+.package-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 14px 30px rgba(0,0,0,.15);
+}
+
+.package-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.package-card:hover img{
+    transform:scale(1.08);
+}
+
+.package-content{
+    padding:25px;
+}
+
+.package-content h3{
+    color:#659287;
+    margin-bottom:18px;
+    font-size:25px;
+}
+
+.package-content ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.package-content ul li{
+    margin:12px 0;
+    color:#555;
+}
+
+.package-content ul li i{
+    color:#659287;
+    margin-right:10px;
+}
+
+.package-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#659287;
+    color:white;
+    padding:12px 24px;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.package-btn:hover{
+    background:#88BDA4;
+}
+
+.badge{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:#ff9800;
+    color:white;
+    padding:8px 15px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:600;
+}
+
+@media(max-width:1000px){
+
+.package-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/*================ CTA =================*/
+
+.service-cta{
+
+width:90%;
+margin:80px auto;
+
+background:linear-gradient(135deg,#659287,#88BDA4);
+
+padding:60px 30px;
+
+border-radius:22px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.service-cta h2{
+
+font-size:38px;
+
+margin-bottom:18px;
+
+}
+
+.service-cta p{
+
+font-size:18px;
+
+margin-bottom:30px;
+
+line-height:1.8;
+
+}
+
+.service-cta a{
+
+display:inline-block;
+
+background:#E6F2DD;
+
+color:#2F3A34;
+
+text-decoration:none;
+
+padding:14px 30px;
+
+border-radius:35px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.service-cta a:hover{
+
+background:white;
+
+transform:scale(1.05);
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#E6F2DD;
+
+padding:60px 8% 20px;
+
+}
+
+.footer-container{
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:40px;
+
+}
+
+.footer-box{
+
+flex:1;
+min-width:250px;
+
+}
+
+.footer-box h2{
+
+color:#659287;
+margin-bottom:20px;
+
+}
+
+.footer-box h3{
+
+margin-bottom:20px;
+color:#2F3A34;
+
+}
+
+.footer-box p{
+
+color:#444;
+line-height:30px;
+
+}
+
+.footer-box a{
+
+display:block;
+
+margin-bottom:12px;
+
+text-decoration:none;
+
+color:#444;
+
+transition:.3s;
+
+}
+
+.footer-box a:hover{
+
+color:#659287;
+padding-left:8px;
+
+}
+
+.footer-box i{
+
+color:#659287;
+margin-right:10px;
+
+}
+
+hr{
+
+margin:40px 0 20px;
+
+border:none;
+
+border-top:1px solid #bfcdb7;
+
+}
+
+.copyright{
+
+text-align:center;
+
+color:#555;
+
+}
+@media(max-width:900px){header{flex-direction:column;height:auto;padding:20px}nav ul{flex-wrap:wrap;justify-content:center;margin:15px 0}.container{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+/*================ SERVICES RESPONSIVE =================*/
+
+@media (max-width:768px){
+
+.service-hero{
+
+padding:100px 20px;
+min-height:400px;
+
+}
+
+.service-hero h1{
+
+font-size:36px;
+
+}
+
+.service-hero p{
+
+font-size:16px;
+line-height:1.7;
+
+}
+
+.service-title{
+
+font-size:30px;
+
+}
+
+.service-subtitle{
+
+font-size:15px;
+
+}
+
+.imaging-card img,
+.lab-card img,
+.package-card img{
+
+height:200px;
+
+}
+
+.imaging-content,
+.lab-content,
+.package-content{
+
+padding:18px;
+
+}
+
+.imaging-content h3,
+.lab-content h3,
+.package-content h3{
+
+font-size:20px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.service-hero{
+
+padding:80px 15px;
+min-height:320px;
+
+}
+
+.service-hero h1{
+
+font-size:28px;
+
+}
+
+.service-hero p{
+
+font-size:15px;
+
+}
+
+.service-title{
+
+font-size:26px;
+
+}
+
+.feature-card,
+.imaging-card,
+.lab-card,
+.package-card{
+
+border-radius:15px;
+
+}
+
+.imaging-btn,
+.lab-btn,
+.package-btn{
+
+display:block;
+width:100%;
+text-align:center;
+
+}
+
+}
+</style>
+</head>
+
+<body>
+<header>
+    <div class="logo"><i class="fa-solid fa-heart-pulse"></i><h2>DiagnoCare</h2></div>
+<nav><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html" class="'active">Services</a></li>
+<li><a href="location.html">Location</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></nav>
+<a class="btn" href="appointment.html">Book Appointment</a>
+</header>
+
+<!-- ================= HERO ================= -->
+
+
+<section class="service-hero">
+
+    <div class="hero-content">
+
+        <h1>Our Diagnostic Services</h1>
+
+        <p>
+            Experience reliable pathology testing, advanced imaging,
+            and preventive health checkups under one roof.
+            Our experienced professionals and modern technology
+            ensure accurate reports with patient-focused care.
+        </p>
+
+        <a href="appointment.html" class="hero-btn">
+            Book Appointment
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= WHY CHOOSE OUR SERVICES ================= -->
+
+<section class="service-feature">
+
+<h2 class="service-title">
+
+Why Choose Our Services?
+
+</h2>
+
+<p class="service-subtitle">
+
+Quality diagnostics with speed, accuracy and care.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-microscope"></i>
+
+<h3>Advanced Equipment</h3>
+
+<p>
+
+Latest diagnostic machines deliver highly accurate
+and dependable results.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+<h3>Expert Specialists</h3>
+
+<p>
+
+Experienced radiologists and laboratory professionals
+you can trust.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-file-medical"></i>
+
+<h3>Digital Reports</h3>
+
+<p>
+
+Access reports online quickly without waiting
+in long queues.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-stopwatch"></i>
+
+<h3>Fast Turnaround</h3>
+
+<p>
+
+Most routine reports are delivered
+within the same day.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= DIAGNOSTIC IMAGING ================= -->
+
+<section class="imaging-section">
+
+<h2 class="service-title">
+Diagnostic Imaging
+</h2>
+
+<p class="service-subtitle">
+Advanced imaging services for fast and accurate diagnosis.
+</p>
+
+<div class="imaging-grid">
+
+<!-- CT Scan -->
+
+<div class="imaging-card">
+
+<img src="images/ct-scan.jpg">
+
+<div class="imaging-content">
+
+<h3>CT Scan</h3>
+
+<p>
+
+High-speed cross-sectional imaging that helps detect
+internal injuries, infections and abnormalities with precision.
+
+</p>
+
+<a href="appointment.html" class="imaging-btn">
+
+Book Now
+
+</a>
+
+</div>
+
+</div>
+
+<!-- MRI -->
+
+<div class="imaging-card">
+
+<img src="images/mri.jpeg">
+
+<div class="imaging-content">
+
+<h3>MRI Scan</h3>
+
+<p>
+
+Detailed imaging for brain, spine, joints and soft tissues
+without using harmful radiation.
+
+</p>
+
+<a href="appointment.html" class="imaging-btn">
+
+Book Now
+
+</a>
+
+</div>
+
+</div>
+
+<!-- X-Ray -->
+
+<div class="imaging-card">
+
+<img src="images/xray.jpg">
+
+<div class="imaging-content">
+
+<h3>Digital X-Ray</h3>
+
+<p>
+
+Quick digital X-Ray imaging for bones, chest and other
+medical examinations with clear results.
+
+</p>
+
+<a href="appointment.html" class="imaging-btn">
+
+Book Now
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Ultrasound -->
+
+<div class="imaging-card">
+
+<img src="images/ultrasound.jpg">
+
+<div class="imaging-content">
+
+<h3>Ultrasound</h3>
+
+<p>
+
+Safe ultrasound imaging for pregnancy, abdomen,
+pelvis and other diagnostic examinations.
+
+</p>
+
+<a href="appointment.html" class="imaging-btn">
+
+Book Now
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= LABORATORY TESTS ================= -->
+
+<section class="lab-section">
+
+<h2 class="service-title">
+Laboratory Tests
+</h2>
+
+<p class="service-subtitle">
+Comprehensive pathology testing with precise and timely reports.
+</p>
+
+<div class="lab-grid">
+
+<!-- CBC -->
+
+<div class="lab-card">
+
+<img src="images/cbc.jpg">
+
+<div class="lab-content">
+
+<h3>Complete Blood Count (CBC)</h3>
+
+<p>
+Measures red blood cells, white blood cells and platelets to evaluate your overall health and detect infections or anemia.
+</p>
+
+<a href="appointment.html" class="lab-btn">
+Book Appointment
+</a>
+
+</div>
+
+</div>
+
+<!-- TFT -->
+
+<div class="lab-card">
+
+<img src="images/tft.jpg">
+
+<div class="lab-content">
+
+<h3>Thyroid Function Test</h3>
+
+<p>
+Checks thyroid hormone levels to diagnose thyroid disorders and monitor ongoing treatment effectively.
+</p>
+
+<a href="appointment.html" class="lab-btn">
+Book Appointment
+</a>
+
+</div>
+
+</div>
+
+<!-- Blood Sugar -->
+
+<div class="lab-card">
+
+<img src="images/blood-sugar.jpg">
+
+<div class="lab-content">
+
+<h3>Blood Sugar Test</h3>
+
+<p>
+Measures blood glucose levels for diabetes screening, diagnosis and regular health monitoring.
+</p>
+
+<a href="appointment.html" class="lab-btn">
+Book Appointment
+</a>
+
+</div>
+
+</div>
+
+<!-- Lipid Profile -->
+
+<div class="lab-card">
+
+<img src="images/lipid-profile.jpg">
+
+<div class="lab-content">
+
+<h3>Lipid Profile</h3>
+
+<p>
+Evaluates cholesterol and triglyceride levels to assess cardiovascular health and heart disease risk.
+</p>
+
+<a href="appointment.html" class="lab-btn">
+Book Appointment
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= HEALTH PACKAGES ================= -->
+
+<section class="package-section">
+
+<h2 class="service-title">
+Health Checkup Packages
+</h2>
+
+<p class="service-subtitle">
+Choose the package that best suits your healthcare needs.
+</p>
+
+<div class="package-grid">
+
+<!-- Basic -->
+
+<div class="package-card">
+
+<img src="images/basic-health.jpeg">
+
+<div class="package-content">
+
+<h3>Basic Health Checkup</h3>
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i>CBC</li>
+
+<li><i class="fa-solid fa-check"></i>Blood Sugar Test</li>
+
+<li><i class="fa-solid fa-check"></i>Blood Pressure</li>
+
+<li><i class="fa-solid fa-check"></i>Doctor Consultation</li>
+
+</ul>
+
+<a href="appointment.html" class="package-btn">
+
+Book Package
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Full Body -->
+
+<div class="package-card">
+
+<div class="badge">
+Most Popular
+</div>
+
+<img src="images/full-body.jpg">
+
+<div class="package-content">
+
+<h3>Full Body Checkup</h3>
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i>CBC</li>
+
+<li><i class="fa-solid fa-check"></i>TFT</li>
+
+<li><i class="fa-solid fa-check"></i>Blood Sugar Test</li>
+
+<li><i class="fa-solid fa-check"></i>Lipid Profile</li>
+
+
+</ul>
+
+<a href="appointment.html" class="package-btn">
+
+Book Package
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Heart -->
+
+<div class="package-card">
+
+<img src="images/heart-checkup.jpg">
+
+<div class="package-content">
+
+<h3>Heart Health Checkup</h3>
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i>ECG</li>
+
+<li><i class="fa-solid fa-check"></i>Lipid Profile</li>
+
+<li><i class="fa-solid fa-check"></i>Blood Pressure</li>
+
+<li><i class="fa-solid fa-check"></i>Blood Sugar Test</li>
+
+</ul>
+
+<a href="appointment.html" class="package-btn">
+
+Book Package
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="service-cta">
+
+<h2>
+
+Need Help Choosing the Right Test?
+
+</h2>
+
+<p>
+
+Our experienced healthcare professionals are here to guide you.
+Book an appointment today and take the first step toward better health.
+
+</p>
+
+<a href="appointment.html">
+
+Book an Appointment
+
+</a>
+
+</section>
+
+<footer>
+
+    <div class="footer-container">
+
+        <!-- Column 1 -->
+        <div class="footer-box">
+
+            <h2>DiagnoCare</h2>
+
+            <p>
+                Providing trusted pathology tests,
+                diagnostic scans and health packages
+                with accurate reports and experienced professionals.
+            </p>
+
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="location.html">Location</a>
+            <a href="appointment.html">Book Appointment</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-box">
+
+            <h3>Contact Info</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Delhi, India
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 9876543210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@diagnocare.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-clock"></i>
+                Mon - Sun : 7:00 AM - 9:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+        © 2026 DiagnoCare. All Rights Reserved.
+    </div>
+
+</footer>
